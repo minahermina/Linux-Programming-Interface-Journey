@@ -1,6 +1,6 @@
 CC = cc
-CFLAGS = -Wall -g
-RCFLAGS = -Wall -Os
+CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700L -D_POSIX_C_SOURCE=200809L
+CFLAGS = -std=c99 -Wno-pedantic -Wall -O3 -ggdb  $(CPPFLAGS)
 
 OUTPUT = main
 
