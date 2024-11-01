@@ -31,7 +31,9 @@ run: $(OUTPUT)
 3:
 	$(CC) $(CFLAGS) -o exercise3 exercise3.c
 
-# To run a specific exercise, use the run1, run2, run3 targets
+4:
+	$(CC) $(CFLAGS) -o exercise4 exercise4.c
+
 
 run2: 2
 	./exercise2
@@ -39,3 +41,5 @@ run2: 2
 run3: 3
 	./exercise3
 
+run4: 4
+	./exercise4
