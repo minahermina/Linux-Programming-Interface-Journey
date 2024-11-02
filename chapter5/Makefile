@@ -34,6 +34,8 @@ run: $(OUTPUT)
 4:
 	$(CC) $(CFLAGS) -o exercise4 exercise4.c
 
+5:
+	$(CC) $(CFLAGS) -o exercise5 exercise5.c
 
 run2: 2
 	./exercise2
@@ -43,3 +45,6 @@ run3: 3
 
 run4: 4
 	./exercise4
+
+run5: 5
+	./exercise5
