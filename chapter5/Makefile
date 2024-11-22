@@ -2,10 +2,9 @@ CC = cc
 CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700L -D_POSIX_C_SOURCE=200809L
 CFLAGS = -std=c99 -Wno-pedantic -Wall -O3 -ggdb  $(CPPFLAGS)
 
-OUTPUT = main
 
-# The list of exercises
-EXERCISES =  exercise2 exercise3
+SRC = $(wildcard *.c)
+OBJ = $(patsubst %.c, %, $(SRC))
 
 # Debug build
 $(OUTPUT): $(OBJ)
@@ -37,6 +36,9 @@ run: $(OUTPUT)
 5:
 	$(CC) $(CFLAGS) -o exercise5 exercise5.c
 
+7:
+	$(CC) $(CFLAGS) -o exercise7 exercise7.c
+
 run2: 2
 	./exercise2
 
@@ -48,3 +50,6 @@ run4: 4
 
 run5: 5
 	./exercise5
+
+run7: 7
+	./exercise7
